@@ -101,15 +101,54 @@ The `api_requests.py` provides methods for interacting with the Cart API:
 
 ## Example Test Cases
 
-### `test_create_update_validate_cart.py`
+### `test_create_and_delete.py`
 
-Tests the creation, updating, and validation of a cart.
+### Scenario 1: Add cart, Get the cart, Delete the cart
+
+1. **Add Cart**
+   - Create a new cart with specific user ID, date, and products.
+   - Verify the cart creation response status code is `201 Created`.
+   - Verify the cart data returned matches the input payload.
+
+2. **Get the Cart**
+   - Retrieve the cart using the cart ID from the previous step.
+   - Verify the response status code is `200 OK`.
+   - Verify the cart data matches the data from the creation step.
+
+3. **Delete the Cart**
+   - Delete the cart using the cart ID.
+   - Verify the response status code is `200 OK`.
+
+### `test_cart_create_update_validate.py`
+
+### Scenario 1: Add cart, update the cart, Delete the cart
+
+1. **Add Cart**
+   - Create a new cart with specific user ID, date, and products.
+   - Verify the cart creation response status code is `201 Created`.
+   - Verify the cart data returned matches the input payload.
+
+2. **Update the Cart**
+   - Update the cart with a new set of products, date, or user ID.
+   - Verify the update response status code is `200 OK`.
+   - Verify the updated cart data matches the update payload.
+
+3. **Get the Cart to Validate**
+   - Retrieve the updated cart using the cart ID.
+   - Verify the response status code is `200 OK`.
+   - Verify the cart data matches the updated data.
+
+4. **Delete the Cart**
+   - Delete the cart using the cart ID.
+   - Verify the response status code is `200 OK`.
 
 ### `test_cart_fetch_sort_order.py`
 
-Tests the fetching and sorting of carts.
+1. **Validate the Last in the List**
+   - Retrieve the last cart in the sorted list.
+   - Verify the cart data matches the expected data.
+
 
 ## Contributing
 
 If you would like to contribute, please open an issue or submit a pull request.
-
