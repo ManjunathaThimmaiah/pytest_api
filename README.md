@@ -148,6 +148,9 @@ The `api_requests.py` provides methods for interacting with the Cart API:
    - Retrieve the last cart in the sorted list.
    - Verify the cart data matches the expected data.
 
+## Note
+
+**There are failing tests in github action, It is due to the fake server which is not really creating any new data or updating nor deleting records**
 
 ## Contributing
 
