@@ -152,6 +152,11 @@ The `api_requests.py` provides methods for interacting with the Cart API:
 
 **There are failing tests in github action, It is due to the fake server which is not really creating any new data or updating nor deleting records**
 
+### Improvements:
+1. Making methods more flexible and more re-usable.
+1. Error Handling and Assertions: Improve the handling of errors and provide more informative assertions.
+3. Parameterized Tests: Use parameterized tests to run the same test with different inputs.
+
 ## Contributing
 
 If you would like to contribute, please open an issue or submit a pull request.
